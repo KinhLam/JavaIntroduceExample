@@ -12,11 +12,19 @@ public class MultiplicationTable {
     }
 
     private static void printMultiplicationTable(int num) {
-        for (int i = 1; i <= 10; i++) {
-            for (int j = 1; j <= num; j++) {
-                System.out.printf(" %d x %d = %d\t", j, i, (i * j));
+        //Ex: 1,2,3,4,5,6,7,8,9,10
+        for (int i = 1; i < 10; i++) {
+//            Ex: j = 2 => 2*1, 2*2, 2*3, 2*4, 2*5;
+            for (int j = 1; j < num; j++) {
+                System.out.printf("%d x %d = %d\n", i, j, num * i * j);
             }
             System.out.println();
         }
+//        for (int i = 1; i <= 10; i++) {
+//            for (int j = 1; j <= num; j++) {
+//                System.out.printf(" %d x %d = %d\t", j, i, (i * j));
+//            }
+//            System.out.println();
+//        }
     }
 }
