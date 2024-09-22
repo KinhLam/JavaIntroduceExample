@@ -7,10 +7,10 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class LibraryManagement {
-    public static void main(String[] args) {
-        Service service = new Service();
-        Scanner sc = new Scanner(System.in);
+    private static Service service = new Service();
+    private static Scanner sc = new Scanner(System.in);
 
+    public static void main(String[] args) {
         while(true) {
             System.out.println("\nLibrary Management System");
             System.out.println("1. Add a new book");
@@ -45,8 +45,6 @@ public class LibraryManagement {
 
 
     private static void addBook() {
-        Service service = new Service();
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter ISBN: (xxx-x-xx-xxxx)");
         String isbn = sc.nextLine();
         System.out.print("Enter publication year: ");
@@ -58,23 +56,13 @@ public class LibraryManagement {
         LocalDate date = LocalDate.parse(sc.nextLine());
         System.out.print("Enter publication place: ");
         String place = sc.nextLine();
-        System.out.print("Enter number of authors: ");
-        int authorCount = sc.nextInt();
-        sc.nextLine(); // Consume newline
-        Set<String> authors = new HashSet<>();
-        for (int i = 0; i < authorCount; i++) {
-            System.out.print("Enter author name: ");
-            authors.add(sc.nextLine());
-        }
 
-        Book book = new Book(year, publisher, date, isbn, authors, place);
+        Book book = new Book(year, publisher, date, isbn, new HashSet<>(), place);
         service.addBook(book);
     }
 
 
     private static void addMagazine() {
-        Service service = new Service();
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter publication year: ");
         int year = sc.nextInt();
         sc.nextLine(); // Consume newline
@@ -95,8 +83,6 @@ public class LibraryManagement {
     }
 
     private static void displayPublicationsYearAndPublisher() {
-        Service service = new Service();
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter year: ");
         int year = sc.nextInt();
         sc.nextLine(); // Consume newline
@@ -106,8 +92,6 @@ public class LibraryManagement {
     }
 
     private static void addAuthorToBook() {
-        Service service = new Service();
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter book ISBN: ");
         String isbn = sc.nextLine();
         System.out.print("Enter author name: ");
@@ -116,29 +100,22 @@ public class LibraryManagement {
     }
 
     private static void displayTop10Magazines() {
-        Service service = new Service();
         service.displayTop10Magazines();
     }
 
     private static void searchBookByIsbn() {
-        Service service = new Service();
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter ISBN: ");
         String isbn = sc.nextLine();
         service.searchBookByIsbn(isbn);
     }
 
     private static void searchBookByAuthor() {
-        Service service = new Service();
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter author name: ");
         String author = sc.nextLine();
         service.searchBookByAuthor(author);
     }
 
     private static void searchBookByPublisher() {
-        Service service = new Service();
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter publisher name: ");
         String publisher = sc.nextLine();
         service.searchBookByPublisher(publisher);

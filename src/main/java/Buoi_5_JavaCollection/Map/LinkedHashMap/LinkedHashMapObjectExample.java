@@ -1,6 +1,6 @@
 package Buoi_5_JavaCollection.Map.LinkedHashMap;
 
-import org.part.Map.Student;
+import Buoi_5_JavaCollection.Map.Student;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

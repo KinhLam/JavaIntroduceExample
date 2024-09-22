@@ -1,6 +1,6 @@
 package Buoi_5_JavaCollection.Set.LinkedHashSet;
 
-import org.part.Set.Person;
+import Buoi_5_JavaCollection.Set.Person;
 
 import java.util.LinkedHashSet;
 

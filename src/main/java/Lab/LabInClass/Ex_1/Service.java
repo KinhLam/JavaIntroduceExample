@@ -33,13 +33,15 @@ class Service {
 
     //3
     public void displayPublicationsYearAndPublisher(int year, String publisher) {
-        System.out.println("Publication in " + year + " by " + publisher + ": ");
+        System.out.println("Publications in " + year + " by " + publisher + ":");
+
         books.stream()
-                .filter(book -> book.getPublicationYear() == year && book.getPublicationDate().equals(publisher))
-                .forEach(book -> book.display());
+                .filter(b -> b.getPublicationYear() == year && b.getPublisher().equalsIgnoreCase(publisher))
+                .forEach(Book::display);
+
         magazines.stream()
-                .filter(magazine -> magazine.getPublicationYear() == year && magazine.getPublicationDate().equals(publisher))
-                .forEach(magazine -> magazine.display());
+                .filter(m -> m.getPublicationYear() == year && m.getPublisher().equalsIgnoreCase(publisher))
+                .forEach(Magazine::display);
     }
 
     //4
@@ -71,7 +73,7 @@ class Service {
         books.stream()
                 .filter(book -> book.getIsbn().equals(isbn))
                 .sorted(Comparator.comparing(Book::getIsbn).thenComparing(Book::getPublicationDate))
-                .forEach(book -> book.display());
+                .forEach(Book::display);
     }
 
     //7
@@ -79,7 +81,7 @@ class Service {
         books.stream()
                 .filter(book -> book.getAuthor().equals(author))
                 .sorted(Comparator.comparing(Book::getIsbn).thenComparing(Book::getPublicationDate))
-                .forEach(book -> book.display());
+                .forEach(Book::display);
     }
 
     //8
@@ -87,7 +89,7 @@ class Service {
         books.stream()
                 .filter(book -> book.getPublisher().equals(publisher))
                 .sorted(Comparator.comparing(Book::getIsbn).thenComparing(Book::getPublicationDate))
-                .forEach(book -> book.display());
+                .forEach(Book::display);
     }
 
     private boolean isValiIsbn(String isbn) {

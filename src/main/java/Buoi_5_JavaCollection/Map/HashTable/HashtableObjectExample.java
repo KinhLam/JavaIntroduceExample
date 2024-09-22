@@ -1,6 +1,8 @@
 package Buoi_5_JavaCollection.Map.HashTable;
 
-import org.part.Map.Student;
+
+
+import Buoi_5_JavaCollection.Map.Student;
 
 import java.util.Hashtable;
 import java.util.Map;
