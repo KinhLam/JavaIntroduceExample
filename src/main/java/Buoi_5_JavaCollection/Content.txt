@@ -1,0 +1,205 @@
+1. List:
+List là interface trong Java Collection Framework đại diện cho một danh sách có thứ tự các phần tử,
+trong đó các phần tử có thể trùng lặp và duy trì thứ tự chèn.
+Các class implement phổ biến của List bao gồm:
+
+a. ArrayList:
+Lý thuyết:
+- ArrayList là một phần của Java Collections Framework, nằm trong package java.util.
+- Implement Interface List và sử dụng mảng động để lưu trữ các phần tử.
+- ArrayList cho phép các phần tử trùng lặp và duy trì thứ tự của các phần tử.
+
+Các method chính:
+- add(E e): Thêm một phần tử vào cuối danh sách.
+- add(int index, E element): Thêm một phần tử tại vị trí chỉ định.
+- get(int index): Truy xuất phần tử tại vị trí chỉ định.
+- set(int index, E element): Thay đổi phần tử tại vị trí chỉ định.
+- remove(int index): Xóa phần tử tại vị trí chỉ định.
+- size(): Trả về số lượng phần tử trong danh sách.
+- clear(): Xóa tất cả các phần tử trong danh sách.
+- contains(Object o): Kiểm tra xem danh sách có chứa phần tử chỉ định không.
+- indexOf(Object o): Trả về chỉ số của phần tử đầu tiên xuất hiện trong danh sách, hoặc -1 nếu không tìm thấy.
+
+b. LinkedList:
+Lý thuyết:
+- LinkedList cũng là một phần của Java Collections Framework, nằm trong package java.util.
+- Implement Interface List và Deque, sử dụng danh sách liên kết đôi để lưu trữ các phần tử.
+- LinkedList hỗ trợ chèn và xóa phần tử hiệu quả hơn so với ArrayList trong một số trường hợp.
+
+Các method chính:
+- add(E e): Thêm phần tử vào cuối danh sách.
+- add(int index, E element): Thêm phần tử tại vị trí chỉ định.
+- get(int index): Truy xuất phần tử tại vị trí chỉ định.
+- set(int index, E element): Thay đổi phần tử tại vị trí chỉ định.
+- remove(int index): Xóa phần tử tại vị trí chỉ định.
+- size(): Trả về số lượng phần tử trong danh sách.
+- clear(): Xóa tất cả các phần tử trong danh sách.
+- contains(Object o): Kiểm tra xem danh sách có chứa phần tử chỉ định không.
+- indexOf(Object o): Trả về chỉ số của phần tử đầu tiên xuất hiện trong danh sách, hoặc -1 nếu không tìm thấy.
+- addFirst(E e): Thêm phần tử vào đầu danh sách.
+- addLast(E e): Thêm phần tử vào cuối danh sách.
+- removeFirst(): Xóa phần tử đầu tiên trong danh sách.
+- removeLast(): Xóa phần tử cuối cùng trong danh sách.
+
+c. Vector:
+Lý thuyết:
+- Vector là một phần của Java Collections Framework, nằm trong package java.util.
+- Nó tương tự như ArrayList, nhưng là đồng bộ, an toàn hơn khi sử dụng trong môi trường đa luồng.
+- Vector cũng sử dụng mảng động để lưu trữ các phần tử và cho phép phần tử trùng lặp.
+
+-Có thể sử dụng trong môi trường đa luồng.
+
+Các method chính:
+- add(E e): Thêm phần tử vào cuối danh sách.
+- add(int index, E element): Thêm phần tử tại vị trí chỉ định.
+- get(int index): Truy xuất phần tử tại vị trí chỉ định.
+- set(int index, E element): Thay đổi phần tử tại vị trí chỉ định.
+- remove(int index): Xóa phần tử tại vị trí chỉ định.
+- size(): Trả về số lượng phần tử trong danh sách.
+- clear(): Xóa tất cả các phần tử trong danh sách.
+- contains(Object o): Kiểm tra xem danh sách có chứa phần tử chỉ định không.
+- indexOf(Object o): Trả về chỉ số của phần tử đầu tiên xuất hiện trong danh sách, hoặc -1 nếu không tìm thấy.
+
+2. Set:
+Set đại diện cho một tập hợp các phần tử không trùng lặp và không duy trì thứ tự chèn.
+
+a. HashSet:
+Lý thuyết:
+- HashSet là một phần của Java Collection Framework và là một implementation của interface Set.
+- Sử dụng một bảng hash để lưu trữ các phần tử, đảm bảo rằng không có phần tử trùng lặp.
+- Không duy trì thứ tự của các phần tử; phần tử có thể không được lưu trữ theo thứ tự mà chúng được thêm vào.
+
+Cách sử dụng:
+- Thêm phần tử bằng phương thức add().
+- Xóa phần tử bằng phương thức remove().
+- Kiểm tra sự tồn tại của phần tử bằng phương thức contains().
+- Lấy kích thước của HashSet bằng phương thức size().
+
+b. TreeSet:
+Lý thuyết:
+- TreeSet là một implementation của NavigableSet và SortedSet,
+sử dụng cây đỏ-đen để lưu trữ phần tử theo thứ tự tự nhiên (hoặc theo một Comparator đã định nghĩa).
+- Không cho phép phần tử trùng lặp và duy trì thứ tự sắp xếp.
+
+Cách sử dụng:
+- Thêm phần tử bằng phương thức add().
+- Xóa phần tử bằng phương thức remove().
+- Kiểm tra sự tồn tại của phần tử bằng phương thức contains().
+- Lấy kích thước của TreeSet bằng phương thức size().
+- Sắp xếp phần tử theo thứ tự tự nhiên hoặc theo một Comparator(So sánh).
+
+c. LinkedHashSet:
+Lý thuyết:
+- LinkedHashSet kế thừa từ HashSet và sử dụng một liên kết đôi để duy trì thứ tự thêm phần tử.
+- Thứ tự của các phần tử trong LinkedHashSet là thứ tự mà chúng được thêm vào, giúp giữ gìn thứ tự nhập vào.
+
+Cách sử dụng:
+- Tương tự như HashSet, nhưng duy trì thứ tự của phần tử.
+
+3. Map:
+Map lưu trữ các cặp khóa - giá trị, trong đó các khóa là duy nhất.
+
+a. HashMap:
+Lý thuyết:
+- Đặc điểm: HashMap là một cấu trúc dữ liệu sử dụng bảng băm để lưu trữ các cặp khóa-giá trị.
+- Không đảm bảo thứ tự của các phần tử.
+- Không đồng bộ hóa (non-synchronized):
+- Điều này làm cho HashMap nhanh hơn so với Hashtable, nhưng không thread-safe.
+- Cho phép null: HashMap cho phép một khóa null và nhiều giá trị null.
+
+Các phương thức cơ bản:
+- put(K key, V value): Thêm một cặp khóa-giá trị.
+- get(Object key): Lấy giá trị dựa trên khóa.
+- remove(Object key): Xóa phần tử dựa trên khóa.
+- containsKey(Object key): Kiểm tra xem khóa có tồn tại không.
+- containsValue(Object value): Kiểm tra xem giá trị có tồn tại không.
+- keySet(): Lấy tất cả các khóa.
+- values(): Lấy tất cả các giá trị.
+
+b. Hashtable:
+Lý thuyết:
+- Đặc điểm: Hashtable là một class cũ hơn HashMap và được đồng bộ hóa (synchronized),
+nên nó an toàn khi sử dụng trong môi trường đa luồng.
+- Không cho phép null: Hashtable không cho phép khóa hoặc giá trị là null.
+- Chậm hơn HashMap: Do cơ chế đồng bộ hóa.
+
+Các phương thức cơ bản:
+- Tương tự như HashMap nhưng đồng bộ hóa.
+
+c. LinkedHashMap:
+Lý thuyết:
+- Đặc điểm: LinkedHashMap duy trì thứ tự chèn của các phần tử (theo thứ tự thêm vào).
+- Không đồng bộ hóa: Không an toàn trong môi trường đa luồng.
+- Cho phép null: Giống HashMap, cho phép khóa null.
+
+Các phương thức cơ bản:
+- Tương tự như HashMap nhưng duy trì thứ tự chèn.
+
+d. TreeMap:
+Lý thuyết:
+- Đặc điểm: TreeMap sắp xếp các phần tử theo thứ tự tự nhiên của khóa hoặc theo comparator được chỉ định.
+- Không đồng bộ hóa: Không an toàn trong môi trường đa luồng.
+- Không cho phép khóa null: Chỉ có thể có các khóa không null.
+
+Các phương thức cơ bản:
+- put(K key, V value): Thêm một cặp khóa-giá trị.
+- get(Object key): Lấy giá trị dựa trên khóa.
+- remove(Object key): Xóa phần tử dựa trên khóa.
+- containsKey(Object key): Kiểm tra xem khóa có tồn tại không.
+- `firstKey() / lastKey
+
+()`: Lấy khóa đầu tiên/cuối cùng.
+- headMap(K toKey): Lấy các phần tử nhỏ hơn khóa chỉ định.
+- tailMap(K fromKey): Lấy các phần tử lớn hơn hoặc bằng khóa chỉ định.
+
+4. Queue:
+Queue là một cấu trúc dữ liệu FIFO (First-In-First-Out), đại diện cho hàng đợi.
+
+a. PriorityQueue
+Lý thuyết
+- PriorityQueue là một loại hàng đợi (queue) mà trong đó các phần tử được lưu trữ theo thứ tự ưu tiên.
+- Nó sử dụng một cấu trúc dữ liệu heap để duy trì thứ tự của các phần tử.
+- Phần tử với độ ưu tiên cao nhất được lấy ra đầu tiên.
+- PriorityQueue không cho phép phần tử null và không đảm bảo thứ tự tự nhiên
+của các phần tử nếu không có một Comparator được cung cấp.
+
+Cách sử dụng
+Constructor:
+- PriorityQueue() tạo một hàng đợi ưu tiên rỗng.
+- PriorityQueue(Comparator<? super E> comparator) cho phép sử dụng một Comparator tùy chỉnh.
+
+Method:
+- add(E e): Thêm phần tử vào hàng đợi.
+- offer(E e): Thêm phần tử vào hàng đợi (tương tự add).
+- peek(): Lấy phần tử đầu tiên mà không loại bỏ.
+- poll(): Lấy và loại bỏ phần tử đầu tiên.
+- remove(Object o): Xóa phần tử cụ thể.
+- size(): Trả về số lượng phần tử trong hàng đợi.
+
+b. ArrayDeque:
+Lý thuyết
+- ArrayDeque là một cấu trúc dữ liệu hàng đợi và deque (doubly-ended queue) dựa trên mảng.
+- Nó hỗ trợ việc thêm và xóa phần tử từ cả hai đầu (trước và sau)
+- Hoạt động nhanh hơn so với LinkedList cho các thao tác hàng đợi.
+- ArrayDeque không cho phép phần tử null.
+
+Cách sử dụng
+- Constructor: ArrayDeque() tạo một hàng đợi rỗng.
+
+Method:
+- addFirst(E e): Thêm phần tử vào đầu deque.
+- addLast(E e): Thêm phần tử vào cuối deque.
+- offerFirst(E e): Thêm phần tử vào đầu deque (tương tự addFirst).
+- offerLast(E e): Thêm phần tử vào cuối deque (tương tự addLast).
+- peekFirst(): Lấy phần tử đầu tiên mà không loại bỏ.
+- peekLast(): Lấy phần tử cuối cùng mà không loại bỏ.
+- pollFirst(): Lấy và loại bỏ phần tử đầu tiên.
+- pollLast(): Lấy và loại bỏ phần tử cuối cùng.
+- removeFirstOccurrence(Object o): Xóa phần tử cụ thể từ đầu.
+- size(): Trả về số lượng phần tử trong deque.
+
+Tổng kết:
+- List: Dùng khi cần danh sách có thứ tự và cho phép trùng lặp.
+- Set: Dùng khi cần tập hợp không trùng lặp, thứ tự có thể không quan trọng.
+- Map: Dùng khi cần lưu cặp khóa-giá trị duy nhất.
+- Queue: Dùng khi cần cấu trúc FIFO hoặc ưu tiên
