@@ -15,6 +15,8 @@ import java.util.List;
 
 
 public class CSVReader {
+
+    //Đọc file
     public List<Person> readCSV(String fileName) {
         List<Person> persons = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
@@ -29,6 +31,7 @@ public class CSVReader {
         return persons;
     }
 
+    //Viết vào trong file
     public void writeCSV(String fileName, List<Person> data) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(fileName))) {
             for (Person person : data) {
@@ -49,7 +52,7 @@ public class CSVReader {
         persons.add(new Person("Jane Smith", 25, "jane@example.com"));
         persons.add(new Person("Alice Brown", 35, "alice@example.com"));
 
-        csvReader.writeCSV("persons.csv", persons);
+        csvReader.writeCSV("src/main/java/Lab/Java_IO/Ex_2/persons.csv", persons);
 
         List<Person> readPersons = csvReader.readCSV("src/main/java/Lab/Java_IO/Ex_2/persons.csv");
         System.out.println("Data read from the CSV file:");
