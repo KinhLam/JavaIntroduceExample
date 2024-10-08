@@ -3,7 +3,7 @@ phép chia hai số. Thực hiện xử lý ngoại lệ để xử lý tình hu
 số bằng 0 và đưa ra một ngoại lệ tùy chỉnh có tên là DivideByZeroException. Kiểm tra máy tính
 class bằng cách gọi phương thức chia với các đầu vào khác nhau và xử lý các ngoại lệ một cách khéo léo.*/
 
-package Lab.Lab_8_ExceptionHandling.Ex_1;
+package Lab.ExceptionHandling.Ex_1;
 
 class DivideByZeroException extends Exception {
     public DivideByZeroException(String s) {
