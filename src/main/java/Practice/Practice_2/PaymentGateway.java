@@ -1,4 +1,4 @@
-package Assignment.ASM2;
+package Practice.Practice_2;
 
 public class PaymentGateway {
     public boolean processPaymen(double amount) {
