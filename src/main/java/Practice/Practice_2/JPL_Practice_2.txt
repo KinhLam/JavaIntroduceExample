@@ -1,0 +1,90 @@
+Problem. Object-oriented programming Objectives:
+• Understand Object-oriented programming
+Problem Descriptions:
+You have been assigned to create a car rental system. The system should consist of the following classes:
+1. CarRentalSystem:
+1.1. Attributes: No specific attributes
+1.2. Method: It serves as the entry point for the program and contains the main method.
+2. Car:
+2.1. Attributes:
+• brand (String): The brand of the car.
+• model (String): The model of the car.
+• year (int): The year the car was manufactured.
+• pricePerDay (double): The rental price per day for the car.
+2.2. Methods: No Args Constructor, All Args Constructor, getter and setter
+3. Customer:
+3.1. Attributes:
+• name (String): The name of the customer.
+• email (String): The email address of the customer.
+• phoneNumber (String): The phone number of the customer.
+3.2. Methods: No Args Constructor, All Args Constructor, getter and setter
+4. RentalContract:
+4.1. Attributes:
+• customer (Customer): The customer associated with the rental contract.
+• car (Car): The car rented in the contract.
+• startDate (Date): The start date of the rental period.
+• endDate (Date): The end date of the rental period.
+• totalCost (double): The total cost of the rental contract.
+4.2. Methods: No Args Constructor, All Args Constructor, getter and setter
+5. CarInventory:
+5.1. Attributes:
+• cars (List<Car>): A list of cars available in the inventory.
+• Note: The availability status of a car can be determined by its presence in the cars list.
+5.2. Methods:
+addCar(Car car): Adds a car to the inventory. (5%)
+• removeCar(Car car): Removes a car from the inventory. (5%)
+• checkAvailability(Car car): Checks the availability of a car in the inventory. (5%)
+• Other methods as needed for managing the car inventory.
+6. CustomerList:
+6.1. Atributes:
+• customers (List<Customer>): A list of customers.
+6.2. Methods:
+• addCustomer(Customer customer): Adds a customer to the List. (5%)
+• removeCustomer(Customer customer): Removes a customer from the List (5%)
+• getCustomerByEmail(String email): Retrieves a customer from the List based on their email address. (5%)
+• Other methods as needed for managing the customer list.
+7. RentalSystem:
+7.1. Attributes: No specific attributes
+7.2. Methods:
+• rentCar(Customer customer, Car car, Date startDate, Date endDate): Handles the process of renting a car by creating a rental contract, updating car availability, etc. (10%)
+• returnCarRental Contract renta/Contract): Handles the process of returning a car by calculating the total cost, updating car availability, etc. (5%)
+• calculateCost(Renta/Contract renta/Contract): Calculates the cost of a rental contract based on the rental period and car price. (5%)
+• Other methods as needed for the main logic of the car rental system.
+8. Invoice:
+8.1. Attributes
+• rentalContract (Renta/Contract): The rental contract associated with the invoice.
+• totalCost (double): The total cost of the rental contract.
+• taxes (double): The amount of taxes applied to the rental cost.
+• discounts (double): The amount of discounts applied to the rental cost.
+8.2. Methods: No Args Constructor, All Args Constructor, getter and setter
+9. PaymentGateway:
+9.1. Attributes: No specific attributes
+9.2. Methods:
+• processPayment(double amount): Simulates the process of processing a payment for a given amount. (5%)
+• generateReceipt(double amount): Simulates generating a receipt for a payment. (5%)
+The main method in the CarRentalSystem class:
+1. In the main method, create instances of the Carinventory and CustomerList classes to manage the car inventory and customer list, respectively. (2%)
+2. Add a few cars to the car inventory using the addar method of the Carinventory class. Set values for the car attributes such as brand, model, year, and price per day. (4%)
+3. Add a few customers to the customer list using the addCustomer method of the CustomerList class. Set values for the customer attributes such as name, email, and phone number. (4%)
+4. Simulate the process of renting a car by performing the following steps: (10%)
+• Prompt the user to enter the email address of the customer who wants to rent a car.
+• Retrieve the customer from the customer list using the getCustomerByEmail method of the CustomerList class.
+• Prompt the user to select a car from the available cars in the car inventory.
+• Check the availability of the selected car using the checkAvailability method of the Carinventory class.
+• If the car is available, prompt the user to enter the rental period (start date and end date).
+• Create a new instance of the RentalContract class with the selected car, customer, and rental period.
+• Calculate the cost of the rental contract using the calculateCost method of the RentalSystem
+Class.
+• Process the payment for the rental using the processPayment method of the PaymentGateway class.
+• If the payment is successful, update the car availability in the car inventory, generate an invoice using the Invoice class, and print the invoice details.
+5. Simulate the process of returning a car by performing the following steps: (10%)
+• Prompt the user to enter the rental contract details (e.g., contract number).
+• Retrieve the rental contract based on the provided details.
+• Prompt the user to enter the return date for the rented car.
+• Calculate the total cost of the rental period using the calculateCost method of the RentalSystem class.
+• Update the car availability in the car inventory, generate an invoice for the return using the Invoice class, and print the invoice details.
+Estimate time: 180 minutes
+Mark scale: 100%
+- Create package, class, method: 10%;
+- Main method with 5 requirements: 30%
+- Implements all of methods: 60%
